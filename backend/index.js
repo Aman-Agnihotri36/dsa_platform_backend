@@ -40,10 +40,9 @@ app.use("/api/v1/user", userRouter)
 //     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"))
 // })
 
-app.get((req, res), () => {
-    res.send('Hellow World')
-})
-
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Server is running!' });
+});
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
