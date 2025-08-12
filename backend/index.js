@@ -40,6 +40,9 @@ app.use("/api/v1/user", userRouter)
 //     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"))
 // })
 
+app.get((req, res), () => {
+    res.send('Hellow World')
+})
 
 
 const PORT = process.env.PORT || 3000
