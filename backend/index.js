@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import cors from 'cors'
+
 // import connectDB from './utils/db.js'
 // import cookieParser from 'cookie-parser'
 import userRouter from './routes/user.route.js'
@@ -17,7 +17,7 @@ const app = express()
 //     allowedHeaders: ['Content-Type', 'Authorization']  // Allow specific headers
 // };
 
-const _dirname = path.resolve()
+// const _dirname = path.resolve()
 
 
 // app.use(cors(corsOptions));
@@ -39,6 +39,8 @@ app.use("/api/v1/user", userRouter)
 // app.get('*', (req, res) => {
 //     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"))
 // })
+
+
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
